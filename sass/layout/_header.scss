@@ -1,0 +1,154 @@
+.logo {
+    height: 3.5em;
+    @include flex-center;
+   
+    
+    img {
+        width: 150px;
+        margin: 1em;
+    }
+}
+.center-content{
+    @include flex-center;
+    
+    .logo{
+        animation: fade-out 10s;
+    }
+}
+.wrap{
+    position: absolute;
+    top: 3.50em;
+    img{
+        object-fit:cover;
+        width:100%; 
+        right: 2em;
+        animation: fade-in 2000ms forwards;
+    }
+}
+#image-height{
+    height: 18em;
+}
+
+.location {
+	background-color: $light-gray;
+	text-align: center;
+	height: 19em;
+
+    &__nav{
+        @include flex-center;
+        background-color:$dark-gray;
+        border:  0.1em inset $color-background;
+        height: 2.5em;
+        i{
+            margin-right: 14px;
+        }
+    }
+
+    &__menu{
+        @include flex-center;
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 15em;
+		padding: 0 1em;
+
+        h3 {
+			font-weight: 400;
+			font-size: 1.2em;
+            &:hover{
+                color: $color-Primary;
+            }
+        }
+
+        button{
+            font-size: 1em;
+            height: 3em;
+            color: $color-background;
+            @include btn-color;
+            text-align: center;
+            outline: none;
+            border: 0px solid rgb(28, 110, 164);
+            border-radius: 3rem;
+            width: 15em;
+            cursor: pointer;
+            @include button-shadow;
+            transition: all 1s ease-in-out;
+                &:hover {
+                @include button-shadow;
+                transform: scale(1.17);
+                color: black;
+
+                }
+        }
+    }
+}
+
+.menu__content{
+    background-color:$light-gray;
+    border-radius: 2.6em 2.6em 0 0;
+    width: 24.10em;
+    
+    position: relative;
+    top: 14em;
+    margin:0 auto;
+    margin-bottom: 14em;
+    padding:5em 2em ;
+    
+}
+//menu subheader seaction//
+.menu__header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    h2{
+        position: absolute;
+        white-space: nowrap;
+        font-family: $font-secondary;
+        font-size: 1.4em;
+        font-weight: 300;
+        margin-right: 5em;
+       
+    
+    }
+
+}
+
+.menu__subtitle{
+    margin: 1em 0em 3em;
+    white-space: nowrap;
+    animation: fade-in 5s forwards;
+
+    h4{
+        white-space: nowrap;
+        font-weight: 400;
+        border-bottom: 3px $color-tertiary solid;
+        width: 33px;
+        height: 23px;
+        margin: 1em 0em;
+    }
+
+}
+
+//order button//
+.menu__button{
+    position: relative;
+    left: 5em;
+    top: 3em;
+    font-size: 1em;
+    height: 3em;
+    color: $color-background;
+    @include btn-color;
+    text-align: center;
+    outline: none;
+    border: 0px solid rgb(28, 110, 164);
+    border-radius: 3em;
+    width: 12em;
+    cursor: pointer;
+    @include button-shadow;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        @include button-shadow;
+        transform: scale(1.15);
+    }
+}

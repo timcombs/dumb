@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    text-decoration: none;
+}
+body {
+    font-family: $font-primary;
+}
+
+a{
+    color: black;
+}
+b{
+    &:hover{
+        color: $color-Primary;
+    }
+}
